@@ -1,0 +1,721 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+:root {
+    font-size: 10px;
+    --ivory: #f3efeb;
+    --lightpink: #efc3ca;
+    --plum: #daabb5;
+    --darkpink: #c98895;
+    --grey: #5a5558;
+}
+
+body {
+    font-family: 'Noto-serif', sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--grey);
+    background-color: var(--ivory);
+    margin: 0px;
+}
+
+menu {
+    margin: 0px;
+} 
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+@media (max-width: 1180px) {
+    .container {
+        width: 95%;
+        margin: auto;
+    }
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-family: 'Noto-serif';
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* General */
+
+button.right-arrow svg {
+    transform: rotate(180deg);
+}
+
+.rounded {
+    border-radius: 5px;
+}
+
+a {
+    color: var(--ivory);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'noto-serif';
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.order-1 {
+    order: 1;
+}
+
+.width-33 {
+    width: 33%;
+}
+
+@media (max-width: 1180px) {
+    .width-33 {
+        width: 100%;
+    }
+
+    .top div {
+        order: 2;
+    }
+
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 1180px) {
+    .hidden-mobile {
+
+        display: none;
+    }
+}
+
+.max {
+    max-width: 100%;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+h1 {
+    font-family: 'Nunito-sans' ;
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+section#reviews {
+    margin: 40px -70px;
+}
+
+
+
+/* Header */
+
+header {
+    background-color: var(--plum);
+    padding: 32px;
+    margin-bottom: 30px;
+}
+
+header a {
+    color: var(--ivory);
+}
+
+.logo {
+
+    font-family: 'Noto-serif', script;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--ivory);
+}
+
+header nav {
+    display: flex;
+    width: 90%;
+    margin: auto;
+
+
+}
+
+header nav li {
+    list-style: none;
+}
+
+header nav menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 80%;
+
+}
+
+header nav menu button {
+    background-color: transparent;
+    border: none;
+    color: var(--ivory);
+    font-size: 2rem;
+    font-family: "Nunito-sans";
+}
+
+header nav menu button+menu {
+    position: absolute;
+    z-index: 1;
+    background-color: var(--plum);
+    padding: 25px;
+    border-radius: 5px;
+    display: none;
+    width: fit-content;
+}
+
+header nav menu button+menu li {
+    padding-top: 10px;
+}
+
+@media (min-width: 1181px) {
+header nav menu li:hover>menu {
+    display: block;
+
+}
+}
+
+header nav menu li:hover button {
+    color: var(--darkpink);
+}
+
+header nav menu li button:after {
+    content: url('../imgs/chevron-white.svg');
+    display: inline-block;
+    padding-left: 10px; 
+    padding-top: 10px;
+    transform: scale(.5);
+}
+
+header nav menu li:hover button:after {
+    content: url('../imgs/chevron-white.svg');
+    padding-left: 10px;
+}
+
+#mobile-menu-button {
+    display: none;
+}
+
+@media (max-width: 1180px) {
+    header {
+        padding: 0px;
+        background-color: var(--darkpink);
+    }
+
+    header.mobile-nav-open {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    header.mobile-nav-open nav>menu {
+        display: block;
+    }
+
+    header nav>menu {
+
+        padding: 0px;
+        flex-direction: column;
+        background-color: var(--darkpink);
+        margin: 0px;
+        align-items: flex-start;
+        width: 100%;
+        position: absolute;
+        top: 106px;
+        z-index: 1;
+    }
+
+    
+    header nav menu button+menu {
+        z-index: 0;
+        position: relative;
+        width: 100%;
+        display: block;
+    }
+
+    header nav menu li:hover button {
+        color: var(--ivory);
+    }
+
+    header nav menu li:hover button:after {
+        content: url('../imgs/chevron-white.svg');
+        padding-left: 10px;
+    }
+
+    .rotate-chevron:after {
+        content: url('../imgs/chevron-white.svg');
+        display: inline-block;
+        padding-left: 0px;
+        padding-right: 10px;
+        transform: rotate(-90deg);
+    }
+    
+
+    header nav {
+        width: 100%;
+        flex-wrap: wrap;
+        background-color: var(--plum);
+
+    }
+
+    header nav menu li {
+        border-bottom: 1px solid var(--plum);
+        width: 100%;
+    }
+
+    header nav menu li a,
+    header nav menu li button {
+        font-size: 2.4rem;
+        padding: 20px 0px 20px 20px;
+        display: inline-block;
+    }
+
+    header nav>div {
+        width: 90%;
+        margin: auto;
+        padding: 20px 0px;
+    }
+
+    header nav menu li.logo {
+        display: block;
+    }
+
+    #mobile-menu-button {
+        text-align: center;
+        display: block;
+
+    }
+
+    #mobile-menu-button span {
+        color: var(--ivory);
+    }
+
+}
+
+header nav img {
+    width: 40px;
+}
+
+/* Section One */
+
+#section-one {
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    margin: 50px -90px;
+    justify-content: space-around;
+}
+
+#section-one div h1 {
+    color: var(--plum);
+    font-family: 'Noto-Serif';
+    font-weight: 300;
+    font-size: 50px;
+    text-align: center;
+}
+
+#section-one div p {
+    color: var(--grey);
+    font-family: 'Noto-Serif';
+    font-weight: 100;
+    font-size: 30px;
+    text-align: center;
+}
+
+#section-one article img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+#top-section div {
+    padding: 30px;
+    width: 430px;
+}
+
+.button-primary {
+    background-color: var(--darkpink);
+    border: none;
+    color: var(--ivory);
+    font-size: 2rem;
+    font-family: "Nunito-sans";
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: fit-content;
+    position: absolute;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+header main img {
+    display: center;
+    width: 900px;
+}
+
+/* Section Two */
+
+#section-two {
+    width: auto;
+}
+
+#instagram {
+    color: var(--plum);
+    text-decoration: underline;
+    font-family: 'Noto-Serif';
+    font-weight: 300;
+    font-size: 40px;
+    margin-top: 100px;
+} 
+
+#section-two h2 {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+#sweets-container {
+
+    background-color: var(--darkpink);
+    margin: 0px;
+    padding: 50px 0px;
+
+}
+
+.sweets-container {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-around;
+  }
+  
+  .sweets img:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  #section-two article img  {
+    width: 250px;
+}
+
+#sweets button img {
+    width: 140px;
+}
+
+#sweets button {
+    background-color: transparent;
+    border: none;
+    color: var(--cream);
+}
+
+#sweets div:last-of-type {
+    display: flex;
+    flex-direction: column;
+}
+
+#sweets button.active img {
+    border: 5px solid var(--teal);
+}
+
+@media (max-width: 1180px) {
+
+    #sweets {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    #sweets div:last-of-type {
+        display: none;
+    }
+
+    #sweets figure img {
+        max-width: 100%;
+    }
+
+    #sweets .left-arrow {
+        order: 2;
+    }
+
+    #sweets .right-arrow {
+        order: 3;
+    }
+
+    #sweets figure {
+        margin: 10px;
+    }
+
+}
+
+
+#sweets div:last-of-type {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Section Three */
+
+#reviews {
+    background-color: var(--lightpink);
+    margin: 50px -70px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.reviews {
+    margin-top: 30px;
+}
+
+#reviews h2 {
+    color: var(--ivory);
+    font-family: 'Noto-Serif';
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+}
+
+#reviews p {
+    color: var(--grey);
+    font-family: 'Nunito-sans';
+    font-size: 20px;
+    text-align: center;
+}
+
+#reviews h3 {
+    color: var(--ivory);
+    font-family: 'Noto-Serif';
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Section Four */
+
+#CustomOrders h2 {
+    color: var(--plum);
+    font-family: 'Noto-Serif';
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+#CustomOrders p {
+    color: var(--grey);
+    font-family: 'Nunito-sans';
+    font-size: 20px;
+    text-align: center;
+    margin: 0px;
+}
+
+
+#CustomOrders {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#CustomOrders img {
+    width: 400px;
+}
+
+
+
+/* Footer */
+
+footer {
+    background-color: var(--plum);
+    color: var(--ivory);
+    font-family: 'Noto-Serif';
+}
+
+footer h2 {
+    color: var(--ivory);
+}
+
+footer h3 {
+    color: var(--darkpink);
+    text-decoration: underline;
+}
+
+footer p{
+    color: var(--grey);
+}
+
+footer nav menu img {
+    width: 50px;
+}
+
+footer nav {
+    width: 80%;
+    margin: auto;
+    padding: 60px 0px;
+    margin-top: 150px;
+}
+
+footer nav li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+footer nav>menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: top;
+}
+
+footer nav>menu li menu {
+    padding: 0px;
+}
+
+footer p {
+    font-size: 15px;
+    text-align: center;
+    margin: 0px;
+    padding-bottom: 10px;
+}
+
+
+@media (max-width: 1180px) {
+
+    footer nav menu li:first-child {
+        width: 100%;
+    }
+
+    footer nav menu li:first-child div {
+        justify-content: flex-start;
+    }
+
+    footer nav menu li:first-child div a {
+        margin-right: 20px;
+    }
+}
+
+
+
+
+section.our-story-section-one div h1 {
+    font-family: 'Nunito-sans';
+    color: var(--plum);
+    font-size: 70px;
+    text-align: center;
+    font-weight: 300;
+}
+
+section.our-story-section-one div img {
+    width: 1189px;
+    height: 752px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+section.our-story-section-one div p {
+    text-align: left;
+    font-size: 25px;
+    font-family: 'nunito-sans';
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    margin-top: 20px;
+
+} 
+
+section.our-story-section-two div.story {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+div.about-img-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+div.about-img-container article {
+    margin: 0 20px; 
+}
+
+div.about-img-container img {
+    width: 100%;
+
+}
+
+section.our-story-section-two{
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section.our-story-section-two img {
+    margin-right: 10px;
+}
+
+section.our-story-section-two .button-primary{
+    margin-bottom: 60px;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+main h1{
+    font-family: 'Nunito-sans';
+    color: var(--plum);
+    font-size: 70px;
+    text-align: center;
+    font-weight: 300;
+}
+
+section#items h2{
+    font-family: 'Nunito-sans';
+    color: var(--lightpink);
+    font-size: 40px;
+    text-align: left;
+    font-weight: 200;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+section#items p{
+    font-family: 'noto serif';
+    color: var(--grey);
+    font-size: 20px;
+    text-align: left;
+    font-weight: 200;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+section.price-img-container img {
+    width: 250px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+section.price-img-container {
+    align-items: right;
+    text-align: right;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
+    display: flex;
+    float: right;
+    margin-top: -1400px;
+}
