@@ -67,6 +67,7 @@ a {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+    text-align: center;
 }
 
 .order-1 {
@@ -136,13 +137,13 @@ header a {
 
     font-family: 'Noto-serif', script;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
     color: var(--ivory);
 }
 
 header nav {
     display: flex;
-    width: 90%;
+    width: 100%;
     margin: auto;
 
 
@@ -157,7 +158,7 @@ header nav menu {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    width: 80%;
+    width: 90%;
 
 }
 
@@ -195,11 +196,10 @@ header nav menu li:hover button {
 }
 
 header nav menu li button:after {
-    content: url('../imgs/chevron-white.svg');
     display: inline-block;
     padding-left: 10px; 
     padding-top: 10px;
-    transform: scale(.5);
+    transform: scale(.35);
 }
 
 header nav menu li:hover button:after {
@@ -361,13 +361,18 @@ header nav img {
 }
 
 main {
-    width: 80%;
+    width: 75%;
     margin: auto;
 }
 
 header main img {
     display: center;
     width: 900px;
+}
+
+section#section-one a.button-primary {
+    margin-top: 30px;
+    text-align: center;
 }
 
 /* Section Two */
@@ -420,7 +425,7 @@ header main img {
 #sweets button {
     background-color: transparent;
     border: none;
-    color: var(--cream);
+    color: var(--ivory);
 }
 
 #sweets div:last-of-type {
@@ -429,7 +434,7 @@ header main img {
 }
 
 #sweets button.active img {
-    border: 5px solid var(--teal);
+    border: 5px solid var(--lightpink);
 }
 
 @media (max-width: 1180px) {
@@ -445,14 +450,6 @@ header main img {
 
     #sweets figure img {
         max-width: 100%;
-    }
-
-    #sweets .left-arrow {
-        order: 2;
-    }
-
-    #sweets .right-arrow {
-        order: 3;
     }
 
     #sweets figure {
@@ -471,9 +468,10 @@ header main img {
 
 #reviews {
     background-color: var(--lightpink);
-    margin: 50px -70px;
     margin-bottom: 100px;
     margin-top: 100px;
+    border-radius: 5px;
+    padding: 30px;
 }
 
 .reviews {
@@ -493,6 +491,9 @@ header main img {
     font-family: 'Nunito-sans';
     font-size: 20px;
     text-align: center;
+    align-items:center;
+    margin-right: 40px;
+    margin-left: 40px;
 }
 
 #reviews h3 {
@@ -501,6 +502,12 @@ header main img {
     font-size: 20px;
     text-align: center;
     text-decoration: none;
+}
+
+section#reviews img {
+    width: 200px;
+    align-items: center;
+    display: inline-block;
 }
 
 /* Section Four */
@@ -519,7 +526,7 @@ header main img {
 #CustomOrders p {
     color: var(--grey);
     font-family: 'Nunito-sans';
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     margin: 0px;
 }
@@ -535,6 +542,9 @@ header main img {
     width: 400px;
 }
 
+article#text {
+    margin-left: 20px;
+}
 
 
 /* Footer */
@@ -620,10 +630,9 @@ section.our-story-section-one div h1 {
 }
 
 section.our-story-section-one div img {
-    width: 1189px;
-    height: 752px;
-    align-items: center;
-    margin-bottom: 40px;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
 }
 
 section.our-story-section-one div p {
@@ -638,7 +647,7 @@ section.our-story-section-one div p {
 } 
 
 section.our-story-section-two div.story {
-    text-align: center;
+
     margin-bottom: 40px;
 }
 
@@ -719,3 +728,76 @@ section.price-img-container {
     float: right;
     margin-top: -1400px;
 }
+
+/* Pop Up */
+
+div#popup p {
+    color: var(--grey);
+    font-family: 'Nunito-sans';
+    font-size: 15px;
+}
+
+#popup {
+    position: relative;
+    background-color: var(--lightpink);
+    padding: 40px 100px;
+    border-radius: 5px;
+    text-align: center;
+    }
+    
+    #popup button {
+        background-color: var(--plum);
+        padding: 10px 20px;
+        width: 100%;
+        border-radius: 5px; 
+        color: var(--ivory)
+    }
+    
+    #popup-container {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left:0;
+        bottom:0;
+        right:0;
+        background-color: rgba(92, 91, 91, 0.7);
+      
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .faq-question {
+        margin: 40px 0px;
+    }
+    
+    .faq-question #faq-button {
+    
+    width: 100%;
+    text-align: left;
+    border-bottom: 2px solid var(--lightpink);
+    font-size: 24px;
+    color: var(--lightpink);
+    position: relative;
+    background-color: transparent;
+    }
+    
+    .faq-question #faq-button span {
+        
+        position: absolute;
+        right: 0px;
+        color:var(--lightpink);
+        font-size: 30px;
+    }
+    
+    .faq-question #faq-button.open::after {
+       
+        position: absolute;
+        right: 0px;
+        color: var(--lightpink);
+        font-size: 30px;
+    }
+    
+    .faq-question p {
+        display: none;
+         color:var(--lightpink);
+    }
